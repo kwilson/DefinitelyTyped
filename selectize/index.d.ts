@@ -97,6 +97,13 @@ declare namespace Selectize {
         hideSelected?: boolean;
 
         /**
+         * If true, the dropdown will be closed after a selection is made.
+         *
+         * Default: false
+         */
+        closeAfterSelect?: boolean;
+
+        /**
          * If true, Selectize will treat any options with a "" value like normal. This defaults to false to
          * accomodate the common <select> practice of having the first empty option act as a placeholder.
          *
@@ -119,6 +126,21 @@ declare namespace Selectize {
          * Default: 300
          */
         loadThrottle?: number;
+
+        /**
+         * The class name added to the wrapper element while awaiting the fulfillment of load requests.
+         *
+         * Default: 'loading'
+         */
+        loadingClass?: string;
+
+        /**
+         * The placeholder of the control (displayed when nothing is selected / typed).
+         * Defaults to input element's placeholder, unless this one is specified.
+         *
+         * Default: undefined
+         */
+        placeholder?: string;
 
         /**
          * If true, the "load" function will be called upon control initialization (with an empty search).
